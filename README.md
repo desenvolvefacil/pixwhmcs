@@ -21,5 +21,5 @@
 
 <p/>
 <h3>Sugestões, Dúvidas?</h3>
-<p>Entrem em contato em: <a>https://desenvolvefacil.com.br</a></p>
+<p>Entrem em contato em: <a href="https://desenvolvefacil.com.br">https://desenvolvefacil.com.br</a></p>
 <p/>
