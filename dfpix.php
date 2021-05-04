@@ -60,7 +60,7 @@ function dfpix_config() {
             'FriendlyName' => 'Ajude a Manter este Projeto',
             'Type' => 'label',
             'Size' => '15',
-            'Description' => '<img style="width: 200px" src="/modules/gateways/dfpix/pix-doacao.jpeg" />',
+            'Description' => '<p><b>Ajude a Manter este Projeto</b></p><p> Faça uma doação de qualquer valor para o PIX</p><img style="width: 200px" src="/modules/gateways/dfpix/pix-doacao.jpeg" /><p>Chave Pix: 04f9c930-6907-4160-bcc7-bb778c51fc2f</p>',
         ),
     );
 }
