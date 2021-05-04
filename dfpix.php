@@ -1,4 +1,5 @@
 <?php
+
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
 }
@@ -54,6 +55,12 @@ function dfpix_config() {
             'Size' => '15',
             'Default' => 'SF-',
             'Description' => 'Digite o Prefixo de seu identificador, para diferenciar de outros sistemas',
+        ),
+        'aviso' => array(
+            'FriendlyName' => 'Ajude a Manter este Projeto',
+            'Type' => 'label',
+            'Size' => '15',
+            'Description' => '<img style="width: 200px" src="/modules/gateways/dfpix/pix-doacao.jpeg" />',
         ),
     );
 }
@@ -136,7 +143,7 @@ function dfpix_link($params) {
             try {
                 var aux = document.createElement("input");
 
-                link = "'.$pix.'";
+                link = "' . $pix . '";
 
                 // Get the text from the element passed into the input
                 aux.setAttribute("value", link);
@@ -163,7 +170,7 @@ function dfpix_link($params) {
 
         }
     </script>';
-    
+
 
     $htmlOutput .= '<p><img style="max-width:150px;" src="/modules/gateways/dfpix/logo_pix.png" /></p>'
             . '<p /><p>Total a Pagar: <br/><b>' . $formatter->formatCurrency($amount, 'BRL') . '</b></p><p /><p />'
@@ -176,11 +183,5 @@ function dfpix_link($params) {
    minlength="10" maxlength="20">' . $pix . '</textarea>'
             . '</p>';
 
-
-
     return $htmlOutput;
 }
-?>
-
-
-
