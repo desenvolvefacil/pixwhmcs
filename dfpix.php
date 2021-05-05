@@ -125,6 +125,7 @@ function dfpix_link($params) {
     $pix = montaPix($px);
     $pix .= "6304"; //Adiciona o campo do CRC no fim da linha do pix.
     $pix .= crcChecksum($pix); //Calcula o checksum CRC16 e acrescenta ao final.
+    
     //gera o qrcode do PIX
     ob_start();
     QRCode::png($pix, null, 'M', 5);
@@ -132,7 +133,7 @@ function dfpix_link($params) {
     ob_end_clean();
     // Exibe a imagem diretamente no navegador codificada em base64.
 
-
+    $urlQrCodePix = $systemUrl."/modules/gateways/dfpix/gerarimagem.php?q=".urlencode($imageString);
 
     $formatter = new NumberFormatter('pt_BR', NumberFormatter::CURRENCY);
 
@@ -171,10 +172,9 @@ function dfpix_link($params) {
         }
     </script>';
 
-
-    $htmlOutput .= '<p><img style="max-width:150px;" src="/modules/gateways/dfpix/logo_pix.png" /></p>'
+    $htmlOutput .= '<p><img style="max-width:150px;" src="'.$systemUrl.'/modules/gateways/dfpix/logo_pix.png" /></p>'
             . '<p /><p>Total a Pagar: <br/><b>' . $formatter->formatCurrency($amount, 'BRL') . '</b></p><p /><p />'
-            . '<p>' . '<img src="data:image/png;base64,' . $imageString . '">' . '</p>'
+            . '<p>' . '<img src="'.$urlQrCodePix.'">' . '</p>'
             . '<p>Clique para copiar o código</p>'
             . '<input style="max-width: 300px;" type="button" onclick="javascript:copiarPix();" value="' . $pix . '" />'
             . '<p /><p /><p />'
