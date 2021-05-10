@@ -175,13 +175,16 @@ function dfpix_link($params) {
     $htmlOutput .= '<p><img style="max-width:150px;" src="'.$systemUrl.'/modules/gateways/dfpix/logo_pix.png" /></p>'
             . '<p /><p>Total a Pagar: <br/><b>' . $formatter->formatCurrency($amount, 'BRL') . '</b></p><p /><p />'
             . '<p>' . '<img src="'.$urlQrCodePix.'">' . '</p>'
-            . '<p>Clique para copiar o código</p>'
+            . '<p>Pix Copia e Cola... (Clique para copiar o código)</p>'
             . '<input style="max-width: 300px;" type="button" onclick="javascript:copiarPix();" value="' . $pix . '" />'
             . '<p /><p /><p />'
             . '<textarea name="textarea"
    rows="5" cols="30"
    minlength="10" maxlength="20">' . $pix . '</textarea>'
-            . '</p>';
+            . '</p><p/>'
+            . '<p>Caso tenha problemas para ler o QrCode Utilize a Chave</p>'
+            . '<p>'.$chavePix."</p>"
+            . "<p>E nos envie o comprovante por email</p>";
 
     return $htmlOutput;
 }

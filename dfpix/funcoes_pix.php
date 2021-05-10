@@ -64,18 +64,20 @@ function c2($input) {
     return str_pad($input, 2, "0", STR_PAD_LEFT);
 }
 
+/*
+  # Esta função auxiliar calcula o CRC-16/CCITT-FALSE
+  #
+  # Autor: evilReiko (https://stackoverflow.com/users/134824/evilreiko)
+  # Postada originalmente em: https://stackoverflow.com/questions/30035582/how-to-calculate-crc16-ccitt-in-php-hex
+ */
+
+// The PHP version of the JS str.charCodeAt(i)
 function charCodeAt($str, $i) {
     return ord(substr($str, $i, 1));
 }
 
 function crcChecksum($str) {
-    /*
-      # Esta função auxiliar calcula o CRC-16/CCITT-FALSE
-      #
-      # Autor: evilReiko (https://stackoverflow.com/users/134824/evilreiko)
-      # Postada originalmente em: https://stackoverflow.com/questions/30035582/how-to-calculate-crc16-ccitt-in-php-hex
-     */
-    // The PHP version of the JS str.charCodeAt(i)
+
 
 
     $crc = 0xFFFF;
