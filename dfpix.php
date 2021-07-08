@@ -203,9 +203,9 @@ function dfpix_link($params) {
             . '<textarea name="textarea"
    rows="5" cols="30"
    minlength="10" maxlength="20">' . $pix . '</textarea>'
-            . '</p><p/>'
+            . '</p><p/><hr />'
             . '<p>Caso tenha problemas para ler o QrCode Utilize a Chave</p>'
-            . '<p>'.$chavePix."</p>"
+            . '<p><b>'.$chavePix."</b></p>"
             . "<p>E nos envie o comprovante por email</p>";
 
     return $htmlOutput;
