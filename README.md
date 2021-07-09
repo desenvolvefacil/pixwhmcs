@@ -2,6 +2,8 @@
 <p/>
 <h3>Instruções</h3>
 <p/>
+<p><b>Não utilizar caracteres especiais no prefixo, utilizem apenas letras.</b></p>
+<p/>
 <p>Faça download e descompacte dentro da pasta /modules/gateways/ de seu Whmcs.</p>
 <p>Entre em: Portais de Pagamento e ative o modulo <b>DF Pix</b>.</p>
 <p>Entre com sua Chave Pix, Seu Nome e sua Cidade.</p>

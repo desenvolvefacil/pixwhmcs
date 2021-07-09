@@ -53,7 +53,7 @@ function dfpix_config() {
             'FriendlyName' => 'Prefixo',
             'Type' => 'text',
             'Size' => '15',
-            'Default' => 'SF-',
+            'Default' => 'SF',
             'Description' => 'Digite o Prefixo de seu identificador, para diferenciar de outros sistemas',
         ),
         'aviso' => array(
@@ -106,6 +106,9 @@ function dfpix_link($params) {
     $moduleName = $params['paymentmethod'];
     $whmcsVersion = $params['whmcsVersion'];
 
+    //remove os caracteres especiais do codido
+    
+    
     /* monta o pix */
     $px[00] = "01"; //Payload Format Indicator, Obrigatório, valor fixo: 01
     // Se o QR Code for para pagamento único (só puder ser utilizado uma vez), descomente a linha a seguir.
