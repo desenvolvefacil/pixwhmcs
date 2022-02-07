@@ -4,6 +4,7 @@ if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
 }
 
+
 include "dfpix/phpqrcode/qrlib.php";
 include "dfpix/funcoes_pix.php";
 
