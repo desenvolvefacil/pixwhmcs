@@ -17,6 +17,7 @@ function dfpix_MetaData() {
     );
 }
 
+
 function dfpix_config() {
     return array(
         // the friendly display name for a payment gateway should be
@@ -129,25 +130,6 @@ function dfpix_link($params) {
     $pix = montaPix($px);
     $pix .= "6304"; //Adiciona o campo do CRC no fim da linha do pix.
     $pix .= crcChecksum($pix); //Calcula o checksum CRC16 e acrescenta ao final.
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
