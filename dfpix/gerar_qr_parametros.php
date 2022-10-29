@@ -49,7 +49,7 @@ $px[00] = "01"; //Payload Format Indicator, Obrigatório, valor fixo: 01
 //$px[01] = "12"; //Se o valor 12 estiver presente, significa que o BR Code só pode ser utilizado uma vez. 
 $px[26][00] = "BR.GOV.BCB.PIX"; //Indica arranjo específico; “00” (GUI) obrigatório e valor fixo: br.gov.bcb.pix
 $px[26][01] = $chavePix; //Chave do destinatário do pix, pode ser EVP, e-mail, CPF ou CNPJ.
-$px[26][02] = "Fatura " . $invoiceId; // Descrição da transação, opcional.
+$px[26][02] = "Fatura-" . $invoiceId; // Descrição da transação, opcional.
 
 $px[52] = "0000"; //Merchant Category Code “0000” ou MCC ISO18245
 $px[53] = "986"; //Moeda, “986” = BRL: real brasileiro - ISO4217
