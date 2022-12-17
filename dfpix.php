@@ -141,7 +141,7 @@ function dfpix_link($params) {
     ob_end_clean();
     // Exibe a imagem diretamente no navegador codificada em base64.
 
-    $urlQrCodePix = $systemUrl."/modules/gateways/dfpix/gerarimagem.php?q=".urlencode($imageString);
+    $urlQrCodePix = "data:image/png;base64,".urlencode($imageString);
 
     $formatter = new NumberFormatter('pt_BR', NumberFormatter::CURRENCY);
 
