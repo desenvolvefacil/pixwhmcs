@@ -132,8 +132,6 @@ function dfpix_link($params) {
     $pix .= crcChecksum($pix); //Calcula o checksum CRC16 e acrescenta ao final.
     
     
-    
-    
     //gera o qrcode do PIX
     ob_start();
     QRCode::png($pix, null, 'M', 5);
